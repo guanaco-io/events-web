@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+GET     /logging                    controllers.HomeController.logging
+GET     /messages                   controllers.HomeController.messages
+GET     /messages/:id               controllers.HomeController.message(id)
+GET     /activities                 controllers.HomeController.activities
+
+GET     /api/:breadcrumb/logging    controllers.ApiController.logging(breadcrumb)
+
+GET     /api/logging/recent         controllers.LogController.recent
+GET     /api/logging/updates        controllers.LogController.updates
+
+GET     /api/messages/recent        controllers.MessageController.recent
+GET     /api/messages/updates       controllers.MessageController.updatesFull
+GET     /api/messages/:id           controllers.MessageController.get(id)
+GET     /api/messages/:id/updates   controllers.MessageController.updates(id)
+
+GET     /api/activity/recent        controllers.BusinessActivityController.recent
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

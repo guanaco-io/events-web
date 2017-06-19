@@ -1,0 +1,12 @@
+@()
+
+@main("Messages") {
+  <h1>Recent messages</h1>
+
+  <div id="messages"/>
+
+  <script type="text/javascript">
+      var message = document.getElementById("messages")
+      Elm.Messages.embed(message);
+  </script>
+}

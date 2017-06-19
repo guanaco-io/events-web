@@ -1,0 +1,12 @@
+@()
+
+@main("Activity") {
+  <h1>Activity</h1>
+
+  <div id="activity"/>
+
+  <script type="text/javascript">
+      var activity = document.getElementById("activity")
+      Elm.Activities.embed(activity);
+  </script>
+}

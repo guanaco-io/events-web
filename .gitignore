@@ -1,0 +1,11 @@
+logs
+target
+*.iml
+/.gradle
+/elm-stuff
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID

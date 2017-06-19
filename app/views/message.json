@@ -1,0 +1,41 @@
+{
+  "id": "ID-strider-43727-1495801917565-37-1520",
+  "logging": [
+    {
+      "timestamp": "2017-05-26T15:47:03.304",
+      "level": "INFO",
+      "message": "Trunking idempotent filestore: var/navision/import.vendor.to.ecg_kaunas"
+    },
+    {
+      "timestamp": "2017-05-26T15:47:03.271",
+      "level": "ERROR",
+      "message": "Failed delivery for (MessageId: ID-strider-43727-1495801917565-37-1523 on ExchangeId: ID-strider-43727-1495801917565-37-1524). Exhausted after delivery attempt: 1 caught: org.apache.olingo.client.api.communication.ODataClientErrorException: The field Preferred Bank Account of table Vendor contains a value (HK) that cannot be found in the related table (Vendor Bank Account). [HTTP/1.1 400 Bad Request]\n\nMessage History\n---------------------------------------------------------------------------------------------------------------------------------------\nRouteId              ProcessorId          Processor                                                                        Elapsed (ms)\n[vendors.to.ecg_kau] [vendors.to.ecg_kau] [seda://ecg_kaunas                                                             ] [       323]\n[                  ] [onCompletion240   ] [onCompletion                                                                  ] [         0]\n[vendors.to.ecg_kau] [idempotentConsumer] [idempotentConsumer[simple{Simple: ${body?.key}}]                              ] [       320]\n[vendors.to.ecg_kau] [log127            ] [log                                                                           ] [         2]\n[vendors.to.ecg_kau] [bean498           ] [bean[Helper(be.e5mode.smx.navision.vendor.VendorImportServiceImpl@43a3b46)]   ] [       315]\n\nExchange\n---------------------------------------------------------------------------------------------------------------------------------------\nExchange[\n\tId                  ID-strider-43727-1495801917565-37-1524\n\tExchangePattern     InOnly\n\tHeaders             {breadcrumbId=ID-strider-43727-1495801917565-37-1520, CamelRedelivered=false, CamelRedeliveryCounter=0}\n\tBodyType            be.e5mode.smx.navision.vendor.VendorData\n\tBody                be.e5mode.smx.navision.vendor.VendorData@7797bebc\n]\n\nStacktrace\n---------------------------------------------------------------------------------------------------------------------------------------"
+    },
+    {
+      "timestamp": "2017-05-26T15:47:03.245",
+      "level": "ERROR",
+      "message": "The field Preferred Bank Account of table Vendor contains a value (HK) that cannot be found in the related table (Vendor Bank Account)."
+    },
+    {
+      "timestamp": "2017-05-26T15:47:03.197",
+      "level": "ERROR",
+      "message": "Error code "
+    },
+    {
+      "timestamp": "2017-05-26T15:47:03.196",
+      "level": "ERROR",
+      "message": "Fout bij het importeren van vendor UAB\"Alma\" in entiteit ECG Kaunas"
+    },
+    {
+      "timestamp": "2017-05-26T15:47:03.084",
+      "level": "INFO",
+      "message": "Bijwerken van gegevens voor leverancier UAB\"Alma\""
+    },
+    {
+      "timestamp": "2017-05-26T15:47:02.93",
+      "level": "INFO",
+      "message": "Verwerken van update voor leverancier S00100 in ECG Kaunas"
+    }
+  ],
+  "status": "completed"
+}

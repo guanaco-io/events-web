@@ -1,0 +1,14 @@
+@(id: String)
+
+@main("Logging") {
+  <h1>Message @id</h1>
+
+  <div id="message"/>
+
+  <script type="text/javascript">
+      var message = document.getElementById("message")
+      Elm.Message.embed(message, {
+          "id": "@id"
+      });
+  </script>
+}

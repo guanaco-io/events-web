@@ -1,0 +1,12 @@
+@()
+
+@main("Logging") {
+  <h1>Logging</h1>
+
+  <div id="logging"/>
+
+  <script type="text/javascript">
+      var logging = document.getElementById("logging")
+      var app = Elm.Logging.embed(logging);
+  </script>
+}
