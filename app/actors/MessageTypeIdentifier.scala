@@ -1,7 +1,7 @@
 package actors
 
 import actors.MessageTypeIdentifier._
-import actors.analyzer.{OpusEdiActor, ScheduleActor, UnidentiedMessageActor}
+import actors.analyzer.{ItemJournalActor, OpusEdiActor, ScheduleActor, UnidentiedMessageActor}
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
 import be.anova.guanaco.events.MessageEvent.Routing
 import be.anova.guanaco.events._
@@ -22,6 +22,7 @@ class MessageTypeIdentifier extends Actor with ActorLogging {
   val fullAccounts = context.actorOf(ScheduleActor.full("account"))
   val fullCustomers = context.actorOf(ScheduleActor.full("customer"))
   val opus = context.actorOf(OpusEdiActor.props())
+  val itemJournal = context.actorOf(ItemJournalActor.props())
   val unidentified = context.actorOf(UnidentiedMessageActor.props())
 
 
@@ -56,6 +57,10 @@ class MessageTypeIdentifier extends Actor with ActorLogging {
         ref ! Initialize(sender)
       }
     }
+    case ByContext("navisionItemJournalRoutes") =>
+      sender ! Publish()
+      itemJournal ! Initialize(sender)
+      sender ! Analyzer(itemJournal, Some(self))
     case event @ ByContext("ediOpusContext") => {
       log.info(s"Event identified as Opus - ${event}")
       sender ! Publish()

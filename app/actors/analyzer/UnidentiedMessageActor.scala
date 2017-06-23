@@ -12,7 +12,7 @@ class UnidentiedMessageActor extends Actor with ActorLogging {
   override def receive: Receive = {
     case Initialize(ref) => {
       ref ! Enrich(message => message.business match {
-        case None => Some(message.copy(business = Some(BusinessContext("message", "Unidentied message"))))
+        case None => Some(message.copy(business = Some(BusinessContext("message", "Unidentif²ied message"))))
         case Some(_) => None
       })
     }
