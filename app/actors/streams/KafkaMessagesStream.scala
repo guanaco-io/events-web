@@ -33,13 +33,14 @@ class KafkaMessagesStream(config: Configuration, implicit val system: ActorSyste
       .map { message =>
         try {
           val json = message.value().parseJson
+          println(message)
           Some(json.convertTo[MessageEvent])
         } catch {
           case e: Exception => None
         }
       }
       .filter(_.isDefined)
-      .map(_.get  )
+      .map(_.get )
       .runWith(Sink.actorRef(dest, NotUsed))
 
 

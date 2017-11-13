@@ -36,6 +36,7 @@ class EventsActor @Inject()(configuration: Configuration) extends Actor with Act
       context become dispatching(filters.filterKeys(actor => actor != sender()))
     }
     case event: Event => {
+      println(s"Dispatching ${event}")
       for {(actor, filter) <- filters}
         if (filter(event)) actor ! event
     }

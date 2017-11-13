@@ -14,7 +14,7 @@ libraryDependencies += filters
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0" % Test
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-stream-kafka" % "0.16",
+  "com.typesafe.akka" %% "akka-stream-kafka" % "0.17",
   "com.typesafe.akka" %% "akka-http" % "10.0.7",
   "be.anova.guanaco" % "events" % "1.0-SNAPSHOT",
   "org.reactivemongo" %% "play2-reactivemongo" % "0.12.3",
