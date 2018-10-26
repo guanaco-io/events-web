@@ -9,3 +9,5 @@ target
 /.project
 /.settings
 /RUNNING_PID
+node_modules
+package-lock.json

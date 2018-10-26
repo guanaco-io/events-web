@@ -6,7 +6,7 @@ import javax.inject.{Inject, Named}
 import actors.EventsActor.{Subscribe, Unsubscribe}
 import actors.CamelMessagesActor._
 import akka.actor.{Actor, ActorLogging, ActorRef}
-import be.anova.guanaco.events.{Event, LogEvent, MessageEvent}
+import io.guanaco.events.messages.{Event, LogEvent, MessageEvent}
 import model.Message
 import services.MessageComponent
 

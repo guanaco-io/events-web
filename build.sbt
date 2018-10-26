@@ -1,5 +1,5 @@
-name := """guanaco-web"""
-organization := "com.example"
+name := """events-web"""
+organization := "io.guanaco"
 
 version := "1.0-SNAPSHOT"
 
@@ -16,7 +16,7 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream-kafka" % "0.17",
   "com.typesafe.akka" %% "akka-http" % "10.0.7",
-  "be.anova.guanaco" % "events" % "1.0-SNAPSHOT",
+  "io.guanaco.events" % "messages" % "1.0-SNAPSHOT",
   "org.reactivemongo" %% "play2-reactivemongo" % "0.12.3",
   "org.webjars" %% "webjars-play" % "2.5.0-4",
   "org.webjars.bower" % "bootstrap-sass" % "3.3.7"
@@ -29,3 +29,4 @@ libraryDependencies ++= Seq(
 // play.sbt.routes.RoutesKeys.routesImport += "com.example.binders._"
 
 (ElmKeys.elmOptions in ElmKeys.elmMake in Assets) ++= Seq("--debug")
+(ElmKeys.elmExecutable in ElmKeys.elmMake in Assets) := "node_modules/elm/binwrappers/elm-make"

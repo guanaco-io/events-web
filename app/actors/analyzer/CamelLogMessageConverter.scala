@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter
 
 import actors.MessageTypeIdentifier.Enrich
 import akka.actor.{Actor, Props}
-import be.anova.guanaco.events.LogEvent
+import io.guanaco.events.messages.LogEvent
 import model.{Logging, Message}
 import model.Logging.MessageLink
 

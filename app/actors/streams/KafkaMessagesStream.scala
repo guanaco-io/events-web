@@ -6,7 +6,7 @@ import akka.kafka.scaladsl.Consumer
 import akka.kafka.{ConsumerSettings, Subscriptions}
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.Sink
-import be.anova.guanaco.events.{LogEvent, MessageEvent}
+import io.guanaco.events.messages.{LogEvent, MessageEvent}
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
 import play.api.Configuration
@@ -25,7 +25,7 @@ class KafkaMessagesStream(config: Configuration, implicit val system: ActorSyste
 
   implicit val materializer = ActorMaterializer()
 
-  import be.anova.guanaco.events.Events._
+  import io.guanaco.events.messages.Events._
   import spray.json._
 
   val done =

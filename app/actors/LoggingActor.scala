@@ -6,7 +6,7 @@ import javax.inject.{Inject, Named}
 import actors.EventsActor.{Subscribe, Unsubscribe}
 import actors.LoggingActor.{RecentLogging, RecentLoggingRequest}
 import akka.actor.{Actor, ActorRef}
-import be.anova.guanaco.events.LogEvent
+import io.guanaco.events.messages.LogEvent
 import model.Logging
 import model.Logging.MessageLink
 

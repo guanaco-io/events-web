@@ -4,7 +4,7 @@ import javax.inject.{Inject, Named}
 
 import actors.EventsActor.{Subscribe, Unsubscribe}
 import akka.actor.{Actor, ActorRef}
-import be.anova.guanaco.events.{LogEvent, MessageEvent}
+import io.guanaco.events.messages.{LogEvent, MessageEvent}
 import model.BusinessMessage
 import services.{BusinessActivityComponent, MessageComponent}
 

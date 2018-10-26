@@ -12,7 +12,7 @@ import play.api.mvc.{Action, _}
 import akka.pattern.ask
 import akka.stream.ActorMaterializer
 import akka.util.Timeout
-import be.anova.guanaco.events.LogEvent
+import io.guanaco.events.messages.LogEvent
 import play.api.libs.streams.ActorFlow
 
 import scala.concurrent.ExecutionContext

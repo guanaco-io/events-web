@@ -3,8 +3,8 @@ package actors
 import actors.MessageTypeIdentifier._
 import actors.analyzer.{ItemJournalActor, OpusEdiActor, ScheduleActor, UnidentiedMessageActor}
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
-import be.anova.guanaco.events.MessageEvent.Routing
-import be.anova.guanaco.events._
+import io.guanaco.events.messages.MessageEvent.Routing
+import io.guanaco.events.messages._
 import model.Message
 
 /**

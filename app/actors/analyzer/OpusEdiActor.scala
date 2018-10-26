@@ -2,7 +2,7 @@ package actors.analyzer
 
 import actors.MessageTypeIdentifier.{Enrich, Initialize}
 import akka.actor.{Actor, ActorLogging, Props}
-import be.anova.guanaco.events.MessageProcessingEvent
+import io.guanaco.events.messages.MessageProcessingEvent
 import model.{BusinessContext, BusinessEntity, Message}
 
 /**

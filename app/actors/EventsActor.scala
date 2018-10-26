@@ -2,7 +2,7 @@ package actors
 
 import actors.streams.{KafkaLoggingStream, KafkaMessagesStream}
 import akka.actor.{Actor, ActorLogging, ActorRef}
-import be.anova.guanaco.events.{Event, LogEvent, MessageEvent}
+import io.guanaco.events.messages.{Event, LogEvent, MessageEvent}
 import com.google.inject.Inject
 import play.api.Configuration
 

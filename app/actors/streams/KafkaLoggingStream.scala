@@ -6,7 +6,7 @@ import akka.kafka.{ConsumerSettings, Subscriptions}
 import akka.kafka.scaladsl.{Consumer, Producer}
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.Sink
-import be.anova.guanaco.events.LogEvent
+import io.guanaco.events.messages.LogEvent
 import org.apache.kafka.clients.consumer.{ConsumerConfig, ConsumerRecord}
 import org.apache.kafka.common.serialization.{ByteArrayDeserializer, StringDeserializer}
 import play.api.Configuration
@@ -25,7 +25,7 @@ class KafkaLoggingStream(config: Configuration, implicit val system: ActorSystem
 
   implicit val materializer = ActorMaterializer()
 
-  import be.anova.guanaco.events.Events._
+  import io.guanaco.events.messages.Events._
   import spray.json._
 
   val done =

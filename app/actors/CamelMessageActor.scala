@@ -4,8 +4,8 @@ import actors.CamelMessagesActor.{MessageState}
 import actors.analyzer.{CamelLogMessageConverter, CamelMessageFlowAnalyzer, CamelMessageTimestampAnalyzer}
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
 import akka.http.scaladsl.server.RouteResult.Complete
-import be.anova.guanaco.events.MessageEvent.Body
-import be.anova.guanaco.events._
+import io.guanaco.events.messages.MessageEvent.Body
+import io.guanaco.events.messages._
 import model.{BusinessContext, Message}
 
 /**

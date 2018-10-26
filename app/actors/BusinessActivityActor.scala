@@ -6,7 +6,7 @@ import javax.inject.{Inject, Named}
 import actors.BusinessActivityActor.{Entity, Evidence, Process}
 import actors.EventsActor.{Subscribe, Unsubscribe}
 import akka.actor.{Actor, ActorLogging, ActorRef, Props}
-import be.anova.guanaco.events.{LogEvent, MessageEvent, MessageProcessingEvent}
+import io.guanaco.events.messages.{LogEvent, MessageEvent, MessageProcessingEvent}
 import model.{BusinessMessage, Logging}
 import services.BusinessActivityComponent
 

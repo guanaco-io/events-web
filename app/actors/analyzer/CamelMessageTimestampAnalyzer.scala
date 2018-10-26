@@ -2,8 +2,8 @@ package actors.analyzer
 
 import actors.MessageTypeIdentifier.Enrich
 import akka.actor.{Actor, ActorLogging, Props}
-import be.anova.guanaco.events.MessageEvent.Identification
-import be.anova.guanaco.events.{MessageCompletedEvent, MessageEvent, MessageFailedEvent, MessageProcessingEvent}
+import io.guanaco.events.messages.MessageEvent.Identification
+import io.guanaco.events.messages.{MessageCompletedEvent, MessageEvent, MessageFailedEvent, MessageProcessingEvent}
 import model.Message
 
 /**
